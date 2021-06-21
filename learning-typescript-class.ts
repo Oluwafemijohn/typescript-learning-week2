@@ -1,3 +1,4 @@
+// Creating the class
 class HumanBeing{
     name:string;
     country:string;
@@ -8,7 +9,7 @@ class HumanBeing{
     status: string;
     likeFood:[string, string, string, string]
 
-
+    //Class constructor
     constructor(name:string, country:string, color:string, gender:string, height:number, weight:number, status:string, likeFood: [string, string, string, string]){
         this.name = name;
         this.country = country;
@@ -20,10 +21,16 @@ class HumanBeing{
         this.likeFood = likeFood
     }
 
-     details = () =>{
-         return `${this.name} is someone from ${this.country} of ${this.color} colour with ${this.height}meter and  ${this.weight}kg. \n He is ${this.status} and likes the following food: ${this.likeFood}`
+    // CLass method
+     details = () => {
+         console.log( `${this.name} is someone from ${this.country} of ${this.color} colour with ${this.height}meter and  ${this.weight}kg. \n He is ${this.status} and likes the following food: ${this.likeFood}`)
     }
 }
 
-const personOne = new HumanBeing("Oluwafemi", "Nigeria", "black", "Male", 1.6, 51, "Single", ["Bread and egg", "Yogut", "Porrage", "Semo"])
+// Initialising the class
+let personOne = new HumanBeing("Oluwafemi", "Nigeria", "black", "Male", 1.6, 51, "Single", ["Bread and egg", "Yogut", "Porrage", "Semo"])
+
+// logining the the details 
 console.log(personOne)
+
+console.log(personOne.details())
